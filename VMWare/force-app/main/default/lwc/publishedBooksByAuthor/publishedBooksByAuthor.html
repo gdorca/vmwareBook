@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Published Books By Author" icon-name="custom:custom63">
+        <div class="slds-m-around_medium">
+            <template if:true={books.data}>
+                <lightning-datatable
+                key-field="Id"
+                data={books.data}
+                columns={columns}
+            >
+           </lightning-datatable>
+            </template>
+            <template if:true={books.error}>
+                <p>{books.error}</p>
+            </template>
+        </div>
+    </lightning-card>
+</template>
+
+
+
